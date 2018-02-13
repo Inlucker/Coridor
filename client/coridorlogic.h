@@ -40,7 +40,7 @@ public:
 	int move(int pole[17][17], int player_id, int new_x, int new_y);
 	int placeWall(int player_id, int x, int y, char dir);
 	bool isWall(int x0, int x1, int y0, int y1);
-	bool aZvezda(int x, int y, int p);
+	bool search(int x, int y, int p);
 	int nextTurn(int res);
 	bool checkDistanse(int x, int new_y, int player_id);
 	bool jumpCheck(int new_x, int new_y, int player_id);

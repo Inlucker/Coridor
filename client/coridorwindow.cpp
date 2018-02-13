@@ -95,6 +95,8 @@ void CoridorWindow::paintEvent(QPaintEvent* pEvent)
 	field->redrawCoridor(game->pole);
 	ui->status->setText(status);
 	ui->turn->setText("Turn of player " + game->getPlayerName(game->currentPlayerId));
+	ui->wallsNumber_1->setText(game->player1.name + "'s walls: " + QString::number(game->coords[2][0]));
+	ui->wallsNumber_2->setText(game->player2.name + "'s walls: " + QString::number(game->coords[2][1]));
 	painter.drawImage(field->getX(), field->getY(), field->getImage());
 	painter.drawImage(walls.hX, walls.hY, walls.gorWall);
 	painter.drawImage(walls.vX, walls.vY, walls.verWall);

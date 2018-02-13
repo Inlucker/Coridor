@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget* parent)
 	resize(400, 300);
 	setMinimumWidth(400);
 	setMinimumHeight(300);
+	setMaximumWidth(400);
+	setMaximumHeight(300);
 	setWindowTitle("Client");
 
 	/*pSocket = new QTcpSocket(this);

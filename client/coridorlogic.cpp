@@ -206,7 +206,7 @@ int CoridorLogic::placeWall(int player_id, int x, int y, char dir)
 		pole[wall[i][0]][wall[i][1]] = w;
 	}
 
-	if (!aZvezda(t, u, 1 - player_id))
+	if (!search(t, u, 1 - player_id))
 	{
 		for (int i = 0; i < 3; i++)
 		{
@@ -216,7 +216,7 @@ int CoridorLogic::placeWall(int player_id, int x, int y, char dir)
 	}
 
 	--coords[2][player_id];
-	if (!aZvezda(coords[0][player_id], coords[1][player_id], player_id))
+	if (!search(coords[0][player_id], coords[1][player_id], player_id))
 	{
 		return 2;
 	}
@@ -228,7 +228,7 @@ bool CoridorLogic::isWall(int x0, int y0, int x1, int y1)
 	return pole[(x0 + x1) / 2][(y0 + y1) / 2] == w;
 }
 
-bool CoridorLogic::aZvezda(int x, int y, int p)
+bool CoridorLogic::search(int x, int y, int p)
 {
 	bool field[9][9];
 
